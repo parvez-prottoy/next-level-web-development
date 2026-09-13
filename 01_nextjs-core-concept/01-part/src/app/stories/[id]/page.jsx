@@ -25,9 +25,6 @@ export default async function StoryDetails({ params }) {
     <div>
       <BackBtn />
       <div className="p-6">
-        <h1 className="text-3xl font-bold mb-6">
-          {id}) {name}
-        </h1>
         <div className="bg-white p-6 rounded-lg shadow-md text-black">
           {/* <Image src={image} alt={name} width={300} height={200} /> */}
           <h2 className="text-xl font-bold mb-2">{name}</h2>
