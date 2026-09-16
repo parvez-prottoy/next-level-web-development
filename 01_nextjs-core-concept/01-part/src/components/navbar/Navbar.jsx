@@ -8,6 +8,7 @@ export default function Navbar() {
   if (pathName.startsWith('/dashboard')) {
     return null;
   }
+
   return (
     <nav className="bg-gray-800 p-4">
       <div className="container mx-auto max-w-6xl px-4 flex items-center justify-between">
