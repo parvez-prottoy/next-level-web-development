@@ -12,6 +12,7 @@ export default function Navbar() {
           <NavItem href="/">Home</NavItem>
           <NavItem href="/tutorials">Tutorials</NavItem>
           <NavItem href="/stories">Stories</NavItem>
+          <NavItem href="/docs">Documentation</NavItem>
           <NavItem href="/about">About</NavItem>
           <NavItem href="/about/team">Team</NavItem>
           <NavItem href="/about/contact">Contact</NavItem>
