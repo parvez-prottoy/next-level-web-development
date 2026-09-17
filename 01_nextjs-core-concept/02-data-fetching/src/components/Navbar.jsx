@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Navbar() {
   return (
@@ -28,13 +29,13 @@ export default function Navbar() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <a>Home</a>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <a>Foods</a>
+              <Link href="/foods">Foods</Link>
             </li>
             <li>
-              <a>Reviews</a>
+              <Link href="/reviews">Reviews</Link>
             </li>
           </ul>
         </div>
@@ -43,13 +44,13 @@ export default function Navbar() {
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Home</a>
+            <Link href="/">Home</Link>
           </li>
           <li>
-            <a>Foods</a>
+            <Link href="/foods">Foods</Link>
           </li>
           <li>
-            <a>Reviews</a>
+            <Link href="/reviews">Reviews</Link>
           </li>
         </ul>
       </div>
