@@ -1,8 +1,6 @@
-import FoodCard from '@/components/foods/FoodCard';
-import { getFoods } from '@/lib/fetchData';
+import FoodsGrid from '@/components/foods/FoodsGrid';
 
-export default async function FoodsPage() {
-  const foods = await getFoods();
+export default function FoodsPage() {
   return (
     <>
       <div className="hero bg-base-100 py-20">
@@ -17,19 +15,7 @@ export default async function FoodsPage() {
           </div>
         </div>
       </div>
-      <div className="text-center py-6">
-        <h2 className="text-blue-500 text-4xl font-bold">{`Total ${foods.length} foods are available`}</h2>
-        <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-2 lg:grid-cols-3 text-black container mx-auto">
-          {!foods ? (
-            <div className="flex flex-col items-center justify-center col-span-full">
-              <h2 className="text-2xl font-bold">No foods found</h2>
-              <p className="text-gray-500">Please try again later.</p>
-            </div>
-          ) : (
-            foods.map((food) => <FoodCard key={food.id} food={food} />)
-          )}
-        </div>
-      </div>
+      <FoodsGrid />
     </>
   );
 }

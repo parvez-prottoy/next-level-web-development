@@ -1,7 +1,8 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function FoodCard({ food }) {
-  const { title, catId, foodImg, price, category } = food || {};
+  const { title, catId, foodImg, price, category, id } = food || {};
   return (
     <div className="card shadow-sm">
       <figure>
@@ -23,7 +24,9 @@ export default function FoodCard({ food }) {
         </p>
         <h2 className="card-title">${price}</h2>
         <div className="card-actions">
-          <button className="btn btn-primary">Buy Now</button>
+          <Link href={`/foods/${id}`} className="btn btn-primary">
+            Buy Now
+          </Link>
         </div>
       </div>
     </div>
