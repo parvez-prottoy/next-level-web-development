@@ -1,6 +1,13 @@
 import { comments } from './data';
-export async function GET() {
-  return Response.json(comments);
+export async function GET(request) {
+  const requestHeader = new Headers(request.headers);
+  console.log(requestHeader.get('authorization'));
+  const searchParams = request.nextUrl.searchParams;
+  const query = searchParams.get('search');
+  const filteredComments = query
+    ? comments.filter((comment) => comment.text.includes(query))
+    : comments;
+  return Response.json(filteredComments);
 }
 export async function POST(request) {
   const comment = await request.json();
