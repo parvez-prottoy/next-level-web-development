@@ -1,5 +1,4 @@
 export default async function Author({ userId }) {
-  await new Promise((resolve) => setTimeout(resolve));
   const res = await fetch(
     `https://jsonplaceholder.typicode.com/users//${userId}`
   );

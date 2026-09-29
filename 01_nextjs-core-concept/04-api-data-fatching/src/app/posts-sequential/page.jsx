@@ -2,7 +2,6 @@ import { Suspense } from 'react';
 import Author from './Author';
 
 export default async function PostsSequential() {
-  await new Promise((resolve) => setTimeout(resolve));
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   const posts = await res.json();
   const filteredPosts = posts.filter((post) => post.id % 10 === 1);
