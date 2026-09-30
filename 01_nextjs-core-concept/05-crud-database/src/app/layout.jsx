@@ -1,3 +1,4 @@
+import CartProvider from '@/context/CartProvider';
 import { Geist, Geist_Mono } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
@@ -23,22 +24,27 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="px-5 py-2 flex  items-center justify-between gap-5 bg-stone-800">
-          <Link href="/">
-            <img src="/assets/logo.png" alt="" className="w-[120px]" />
-          </Link>
-
-          <div className="space-x-5">
-            <Link className="btn" href="/foods">
-              Food
+        <CartProvider>
+          <header className="px-5 py-2 flex  items-center justify-between gap-5 bg-stone-800">
+            <Link href="/">
+              <img src="/assets/logo.png" alt="" className="w-[120px]" />
             </Link>
-            <Link className="btn" href="/reviews">
-              Reviews
-            </Link>
-          </div>
-        </header>
 
-        <main className="px-5 py-8">{children}</main>
+            <div className="space-x-5">
+              <Link className="btn" href="/foods">
+                Food
+              </Link>
+              <Link className="btn" href="/reviews">
+                Reviews
+              </Link>
+              <span className="btn" href="/reviews">
+                Cart <sup>0</sup>
+              </span>
+            </div>
+          </header>
+
+          <main className="px-5 py-8">{children}</main>
+        </CartProvider>
       </body>
     </html>
   );

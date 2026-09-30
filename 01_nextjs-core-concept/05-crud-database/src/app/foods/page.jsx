@@ -1,4 +1,5 @@
 import FoodCard from '@/components/foods/FoodCard';
+import FoodCarts from '@/components/foods/FoodCarts';
 
 const getFoods = async () => {
   const res = await fetch(
@@ -23,10 +24,7 @@ export default async function FoodsPage() {
             <FoodCard key={food.id} food={food} />
           ))}
         </div>
-        <div className="w-62.5 border-2 rounded-xl p-4">
-          <h2 className="text-2xl font-bold">Cart Items</h2> <hr />
-          {/* <CartItems></CartItems> */}
-        </div>
+        <FoodCarts />
       </div>
     </div>
   );
