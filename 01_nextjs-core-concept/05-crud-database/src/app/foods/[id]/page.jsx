@@ -1,3 +1,5 @@
+import AddToCartBtn from '@/components/foods/AddToCartBtn';
+
 const getFood = async (id) => {
   const res = await fetch(
     `https://taxi-kitchen-api.vercel.app/api/v1/foods/${id}`
@@ -47,10 +49,7 @@ export default async function FoodDetails({ params }) {
         >
           Watch Video
         </a>
-
-        <button className="flex-1 bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700">
-          Add to Cart
-        </button>
+        <AddToCartBtn food={food} />
       </div>
     </div>
   );

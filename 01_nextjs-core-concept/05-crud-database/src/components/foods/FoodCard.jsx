@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import AddToCartBtn from './AddToCartBtn';
 
@@ -5,10 +6,12 @@ export default function FoodCard({ food }) {
   const { foodImg, title, category, price, id } = food;
   return (
     <div className={`border rounded-xl p-4 shadow hover:shadow-lg transition`}>
-      <img
+      <Image
         src={foodImg}
         alt={title}
         className="w-full h-44 object-cover rounded-lg"
+        width={300}
+        height={200}
       />
 
       <div className="mt-3">

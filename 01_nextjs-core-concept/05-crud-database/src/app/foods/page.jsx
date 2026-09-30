@@ -14,7 +14,8 @@ export default async function FoodsPage() {
   return (
     <div>
       <h2 className={`text-4xl font-bold`}>
-        Total <span className="text-yellow-500">10 </span> Foods Found
+        Total <span className="text-yellow-500">{foods.length} </span> Foods
+        Found
       </h2>
       <div className="my-4">{/* <InputSearch></InputSearch> */}</div>
 

@@ -1,16 +1,11 @@
+import CartItem from '@/components/navbar/CartItem';
 import CartProvider from '@/context/CartProvider';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import Link from 'next/link';
 import './globals.css';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
+const poppins = Poppins({
+  weight: ['400', '500', '600', '800'],
 });
 
 export const metadata = {
@@ -22,7 +17,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.className} antialiased`}
+        cz-shortcut-listen="true"
       >
         <CartProvider>
           <header className="px-5 py-2 flex  items-center justify-between gap-5 bg-stone-800">
@@ -37,9 +33,7 @@ export default function RootLayout({ children }) {
               <Link className="btn" href="/reviews">
                 Reviews
               </Link>
-              <span className="btn" href="/reviews">
-                Cart <sup>0</sup>
-              </span>
+              <CartItem />
             </div>
           </header>
 
