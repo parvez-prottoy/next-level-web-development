@@ -1,6 +1,7 @@
 import CartItem from '@/components/navbar/CartItem';
 import CartProvider from '@/context/CartProvider';
 import { Poppins } from 'next/font/google';
+import Image from 'next/image';
 import Link from 'next/link';
 import './globals.css';
 
@@ -23,7 +24,13 @@ export default function RootLayout({ children }) {
         <CartProvider>
           <header className="px-5 py-2 flex  items-center justify-between gap-5 bg-stone-800">
             <Link href="/">
-              <img src="/assets/logo.png" alt="" className="w-[120px]" />
+              <Image
+                src="/assets/logo.png"
+                alt=""
+                className="w-30"
+                width={120}
+                height={120}
+              />
             </Link>
 
             <div className="space-x-5">
