@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Learn Next.js Routing",
+    "description": "Learn how file-based routing works in Next.js.",
+    "status": "completed",
+    "priority": "high",
+    "dueDate": "2026-10-02"
+  },
+  {
+    "id": 2,
+    "title": "Create Navbar",
+    "description": "Build a responsive navigation bar for the application.",
+    "status": "completed",
+    "priority": "medium",
+    "dueDate": "2026-10-03"
+  },
+  {
+    "id": 3,
+    "title": "Build Task Card",
+    "description": "Create a reusable task card component using React.",
+    "status": "in-progress",
+    "priority": "high",
+    "dueDate": "2026-10-04"
+  },
+  {
+    "id": 4,
+    "title": "Learn Server Components",
+    "description": "Understand the difference between Server Components and Client Components.",
+    "status": "in-progress",
+    "priority": "high",
+    "dueDate": "2026-10-05"
+  },
+  {
+    "id": 5,
+    "title": "Practice API Fetching",
+    "description": "Fetch task data from an external API using Next.js.",
+    "status": "pending",
+    "priority": "medium",
+    "dueDate": "2026-10-06"
+  },
+  {
+    "id": 6,
+    "title": "Add Loading UI",
+    "description": "Create a loading skeleton for the task list.",
+    "status": "pending",
+    "priority": "medium",
+    "dueDate": "2026-10-07"
+  },
+  {
+    "id": 7,
+    "title": "Create Task Details",
+    "description": "Create a dynamic route to display individual task details.",
+    "status": "pending",
+    "priority": "high",
+    "dueDate": "2026-10-08"
+  },
+  {
+    "id": 8,
+    "title": "Implement Delete Task",
+    "description": "Add functionality to delete a task from the task list.",
+    "status": "pending",
+    "priority": "high",
+    "dueDate": "2026-10-09"
+  },
+  {
+    "id": 9,
+    "title": "Add Task Filter",
+    "description": "Allow users to filter tasks by status and priority.",
+    "status": "pending",
+    "priority": "medium",
+    "dueDate": "2026-10-10"
+  },
+  {
+    "id": 10,
+    "title": "Deploy Project",
+    "description": "Deploy the Next.js task management application to Vercel.",
+    "status": "pending",
+    "priority": "low",
+    "dueDate": "2026-10-12"
+  }
+]
